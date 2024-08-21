@@ -41,7 +41,7 @@
           Quick steps to try:<br />
           1. Ensure merchants API is running. If you are developing locally,
           RedWaves assumes it is running on port 8000 by default.<br />
-          2. Make sure <code>BITCART_ADMIN_API_URL</code> is set to the correct
+          2. Make sure <code>RDWV_ADMIN_API_URL</code> is set to the correct
           URL.<br />
           3. If you are using RedWaves with ssl enabled, Merchants API's ssl
           certificate might not have been generated yet. Please retry a bit

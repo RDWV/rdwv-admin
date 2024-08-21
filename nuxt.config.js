@@ -89,15 +89,15 @@ export default {
    ** Runtime config
    */
   publicRuntimeConfig: {
-    URL: process.env.BITCART_ADMIN_API_URL || "http://localhost:8000",
-    SOCKS_PROXY: process.env.BITCART_ADMIN_SOCKS_PROXY || "",
-    ONION_API_URL: process.env.BITCART_ADMIN_ONION_API_URL || "",
-    ONION_HOST: process.env.BITCART_ADMIN_ONION_HOST || "",
-    ROOTPATH: process.env.BITCART_ADMIN_ROOTPATH || "/",
-    LOG_FILE_NAME: process.env.BITCART_ADMIN_LOG_FILE || "rdwv.log",
-    STORE_HOST: process.env.BITCART_STORE_HOST || "localhost:4000",
-    STORE_ROOTPATH: process.env.BITCART_STORE_ROOTPATH || "/",
-    ONION_STORE_HOST: process.env.BITCART_STORE_ONION_HOST || "",
+    URL: process.env.RDWV_ADMIN_API_URL || "http://localhost:8000",
+    SOCKS_PROXY: process.env.RDWV_ADMIN_SOCKS_PROXY || "",
+    ONION_API_URL: process.env.RDWV_ADMIN_ONION_API_URL || "",
+    ONION_HOST: process.env.RDWV_ADMIN_ONION_HOST || "",
+    ROOTPATH: process.env.RDWV_ADMIN_ROOTPATH || "/",
+    LOG_FILE_NAME: process.env.RDWV_ADMIN_LOG_FILE || "rdwv.log",
+    STORE_HOST: process.env.RDWV_STORE_HOST || "localhost:4000",
+    STORE_ROOTPATH: process.env.RDWV_STORE_ROOTPATH || "/",
+    ONION_STORE_HOST: process.env.RDWV_STORE_ONION_HOST || "",
   },
   /*
    ** Nuxt.js modules
@@ -120,7 +120,7 @@ export default {
   },
   router: {
     middleware: ["onion", "auth"],
-    base: process.env.BITCART_ADMIN_ROOTPATH || "/",
+    base: process.env.RDWV_ADMIN_ROOTPATH || "/",
   },
   modulesDir: ["node_modules", "modules"],
   vuems: {

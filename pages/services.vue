@@ -2,7 +2,7 @@
   <div>
     <div v-if="noServices" class="pt-5">
       No hidden services found. Enable tor via
-      <code>export BITCART_ADDITIONAL_COMPONENTS=tor; ./setup.sh</code>
+      <code>export RDWV_ADDITIONAL_COMPONENTS=tor; ./setup.sh</code>
       to enable hidden services
     </div>
     <v-list v-if="!noServices">

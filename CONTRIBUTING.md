@@ -47,7 +47,7 @@ There are two possible ways:
 1. Use our demo (recommended for quick setup to try it out or small fixes, won't work when adding new features with api changes)
 
 ```bash
-export BITCART_ADMIN_API_URL=https://api.rdwv.ai
+export RDWV_ADMIN_API_URL=https://api.rdwv.ai
 yarn dev
 ```
 

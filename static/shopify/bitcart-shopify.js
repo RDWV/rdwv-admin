@@ -23,8 +23,8 @@ window.RdwvShopifyIntegrationModule = function () {
   }
 
   const shopify_order_id = Shopify.checkout.order_id
-  const adminURL = window.BITCART_ADMIN_URL
-  const apiURL = window.BITCART_API_URL
+  const adminURL = window.RDWV_ADMIN_URL
+  const apiURL = window.RDWV_API_URL
   const storeId = window.STORE_ID
   let currentInvoiceData
   let modalShown = false
