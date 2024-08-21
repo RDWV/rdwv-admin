@@ -51,11 +51,11 @@
         >
         <v-card-text class="text--primary"
           >DNS lookup failed on the domain. Without configured DNS records you
-          won't be able to access your Bitcart instance. Do you want to
+          won't be able to access your RedWaves instance. Do you want to
           proceed?</v-card-text
         >
         <v-card-text class="text-subtitle-1">
-          <code>bitcart.local</code> domain is fine for local deployments, but
+          <code>rdwv.local</code> domain is fine for local deployments, but
           our configurator can't access it, you would need to copy the script
           manually
         </v-card-text>
@@ -141,8 +141,8 @@ export default {
             cards: [
               {
                 title: "Tor support",
-                text: "Enables Tor and hidden services support.\nMakes all the public-facing services run under Tor,\nmaking it possible to run Bitcart in complex network conditions or without a domain",
-                docs: "https://docs.bitcart.ai/guides/tor",
+                text: "Enables Tor and hidden services support.\nMakes all the public-facing services run under Tor,\nmaking it possible to run RedWaves in complex network conditions or without a domain",
+                docs: "https://docs.rdwv.ai/guides/tor",
                 service: "tor",
               },
             ],
@@ -167,8 +167,8 @@ export default {
         "Summary",
       ],
       titles: [
-        "What Bitcart instance are you configuring?",
-        "How will you be accessing your Bitcart?",
+        "What RedWaves instance are you configuring?",
+        "How will you be accessing your RedWaves?",
         "Which coins to enable?",
         "Something else?",
         "Advanced settings",
@@ -215,7 +215,7 @@ export default {
     },
     statusText() {
       return !this.failedDeployment
-        ? "Successfully installed Bitcart"
+        ? "Successfully installed RedWaves"
         : "Deployment failed"
     },
   },
@@ -270,7 +270,7 @@ export default {
               installationPack: r.data.advanced_settings.installation_pack,
               additionalComponents:
                 r.data.advanced_settings.additional_components,
-              customRepoURL: r.data.advanced_settings.bitcart_docker_repository,
+              customRepoURL: r.data.advanced_settings.rdwv_docker_repository,
             },
             mode: {
               name: this.currentMode,
@@ -319,7 +319,7 @@ export default {
           advanced_settings: {
             installation_pack:
               this.installData.advancedSettings.installationPack,
-            bitcart_docker_repository:
+            rdwv_docker_repository:
               this.installData.advancedSettings.customRepoURL,
             additional_components:
               this.installData.advancedSettings.additionalComponents,

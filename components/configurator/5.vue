@@ -19,7 +19,7 @@
         ></v-combobox>
         <v-text-field
           v-model="advancedSettings.customRepoURL"
-          label="Custom bitcart-docker repository"
+          label="Custom rdwv-docker repository"
         />
       </v-card-text>
     </v-card>

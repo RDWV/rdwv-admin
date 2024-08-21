@@ -2,8 +2,8 @@ const fs = require("fs")
 const bodyParser = require("body-parser")
 const app = require("express")()
 
-const modalJs = fs.readFileSync("static/modal/bitcart.js", "utf8")
-const shopifyJs = fs.readFileSync("static/shopify/bitcart-shopify.js", "utf8")
+const modalJs = fs.readFileSync("static/modal/rdwv.js", "utf8")
+const shopifyJs = fs.readFileSync("static/shopify/rdwv-shopify.js", "utf8")
 const apiURL = process.env.BITCART_ADMIN_API_URL || "http://localhost:8000"
 const rootPath = process.env.BITCART_ADMIN_ROOTPATH || "/"
 const finalJs = modalJs + "\n" + shopifyJs

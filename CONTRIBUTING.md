@@ -1,20 +1,20 @@
-# Contributing to Bitcart Admin Panel
+# Contributing to RedWaves Admin Panel
 
-Welcome, and thank you for your interest in contributing to Bitcart Admin Panel!
+Welcome, and thank you for your interest in contributing to RedWaves Admin Panel!
 
-Our [central contributing guidelines](https://github.com/bitcart/bitcart/blob/master/CONTRIBUTING.md) apply to all Bitcart repositories.
+Our [central contributing guidelines](https://github.com/rdwv/rdwv/blob/master/CONTRIBUTING.md) apply to all RedWaves repositories.
 
-Below are the instructions for setting up development environment with Bitcart Admin Panel.
+Below are the instructions for setting up development environment with RedWaves Admin Panel.
 
 ## Setting up development environment
 
-Some general advice can be found in our [central contributing guidelines](https://github.com/bitcart/bitcart/blob/master/CONTRIBUTING.md#setting-up-development-environment).
+Some general advice can be found in our [central contributing guidelines](https://github.com/rdwv/rdwv/blob/master/CONTRIBUTING.md#setting-up-development-environment).
 
 Installation instructions:
 
 ```bash
-git clone https://github.com/<<<your-github-account>>>/bitcart-admin.git
-cd bitcart-admin
+git clone https://github.com/<<<your-github-account>>>/rdwv-admin.git
+cd rdwv-admin
 yarn
 ```
 
@@ -40,20 +40,20 @@ pre-commit install
 
 ## Merchants API
 
-In order to develop the admin panel you need our [Merchants API](https://github.com/bitcart/bitcart) instance running.
+In order to develop the admin panel you need our [Merchants API](https://github.com/rdwv/rdwv) instance running.
 
 There are two possible ways:
 
 1. Use our demo (recommended for quick setup to try it out or small fixes, won't work when adding new features with api changes)
 
 ```bash
-export BITCART_ADMIN_API_URL=https://api.bitcart.ai
+export BITCART_ADMIN_API_URL=https://api.rdwv.ai
 yarn dev
 ```
 
-2. Run merchants API locally (recommended to not depend on demo api, when adding new api features and for faster local development in the future). See [this guide](https://github.com/bitcart/bitcart/blob/master/CONTRIBUTING.md#setting-up-python-development-environment)
+2. Run merchants API locally (recommended to not depend on demo api, when adding new api features and for faster local development in the future). See [this guide](https://github.com/rdwv/rdwv/blob/master/CONTRIBUTING.md#setting-up-python-development-environment)
 
-Make sure to follow [our coding guidelines](https://github.com/bitcart/bitcart/blob/master/CODING_STANDARDS.md) when developing.
+Make sure to follow [our coding guidelines](https://github.com/rdwv/rdwv/blob/master/CODING_STANDARDS.md) when developing.
 
 # Thank You!
 

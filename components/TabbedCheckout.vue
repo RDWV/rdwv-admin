@@ -817,7 +817,7 @@ export default {
     },
     showPopup() {
       this.$emit("closedialog")
-      window.bitcart.showInvoice(this.invoice.id)
+      window.rdwv.showInvoice(this.invoice.id)
     },
     checkout(id) {
       if (!id) {

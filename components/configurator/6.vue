@@ -105,7 +105,7 @@
               :value="value.advancedSettings.additionalComponents.join(', ')"
             />
             <pretty-text
-              text="Custom bitcart-docker URL:"
+              text="Custom rdwv-docker URL:"
               :value="value.advancedSettings.customRepoURL"
             />
           </v-card-text>

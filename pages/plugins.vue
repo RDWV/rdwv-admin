@@ -100,7 +100,7 @@
     ></v-file-input>
     <ManagementCommand
       title="Upload plugin"
-      details="Installs a plugin from .bitcart file"
+      details="Installs a plugin from .rdwv file"
       btn-text="Start plugin installation process"
       command-prefix="plugins"
       what="install"

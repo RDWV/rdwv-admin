@@ -1,6 +1,6 @@
 ;(function () {
   let showingInvoice = false
-  const scriptSrcRegex = /\/modal\/bitcart\.js(\?v=.*)?$/
+  const scriptSrcRegex = /\/modal\/rdwv\.js(\?v=.*)?$/
   const supportsCurrentScript = "currentScript" in document
   let thisScript = ""
   if (supportsCurrentScript) {
@@ -14,13 +14,13 @@
     }
   }
 
-  if (window.bitcart) {
+  if (window.rdwv) {
     return
   }
 
   let iframe = document.createElement("iframe")
-  iframe.name = "bitcart"
-  iframe.class = "bitcart"
+  iframe.name = "rdwv"
+  iframe.class = "rdwv"
   iframe.setAttribute("allowtransparency", "true")
   iframe.style.display = "block"
   iframe.style.border = 0
@@ -34,7 +34,7 @@
   let origin = ""
   const scriptMatch = thisScript.match(scriptSrcRegex)
   if (scriptMatch) {
-    // Strip /modal/bitcart.js part
+    // Strip /modal/rdwv.js part
     origin = thisScript.substr(0, thisScript.length - scriptMatch[0].length)
   }
   // urlPrefix should be site root without trailing slash
@@ -50,7 +50,7 @@
   let onModalReceiveMessageMethod = function (event) {}
 
   function showFrame() {
-    if (window.document.getElementsByName("bitcart").length === 0) {
+    if (window.document.getElementsByName("rdwv").length === 0) {
       window.document.body.appendChild(iframe)
     }
     onModalWillEnterMethod()
@@ -109,7 +109,7 @@
 
   window.addEventListener("message", receiveMessage, false)
 
-  window.bitcart = {
+  window.rdwv = {
     showFrame,
     hideFrame,
     showInvoice,

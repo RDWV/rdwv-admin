@@ -1,19 +1,19 @@
 version: 2.1
 
 orbs:
-  bitcart: bitcart/bitcart-shared@2
+  rdwv: rdwv/rdwv-shared@2
 
 workflows:
   version: 2
   test-and-deploy:
     jobs:
-      - bitcart/lint:
+      - rdwv/lint:
           name: lint
-          executor: bitcart/python-node
+          executor: rdwv/python-node
           pre-steps:
             - checkout
-            - bitcart/install-node-dependencies
-      - bitcart/deploy-amd64:
+            - rdwv/install-node-dependencies
+      - rdwv/deploy-amd64:
           name: deploy-amd64
           context: global
           filters:
@@ -21,7 +21,7 @@ workflows:
               ignore: /.*/
             tags:
               only: /[0-9]+(\.[0-9]+)*/
-      - bitcart/deploy-arm:
+      - rdwv/deploy-arm:
           name: deploy-arm
           context: global
           filters:
@@ -29,7 +29,7 @@ workflows:
               ignore: /.*/
             tags:
               only: /[0-9]+(\.[0-9]+)*/
-      - bitcart/deploy:
+      - rdwv/deploy:
           name: deploy
           context: global
           requires:

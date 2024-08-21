@@ -29,21 +29,21 @@ export default {
           {
             title: "Update the server",
             details:
-              "Updating your Bitcart instance will make it unavailable for some time. When clicked, page won't automatically reload on successful update.",
+              "Updating your RedWaves instance will make it unavailable for some time. When clicked, page won't automatically reload on successful update.",
             btnText: "Start update process",
             what: "update",
           },
           {
             title: "Restart the server",
             details:
-              "Restarting your Bitcart instance will make it unavailable for some time. It might fix some issues you are experiencing",
+              "Restarting your RedWaves instance will make it unavailable for some time. It might fix some issues you are experiencing",
             btnText: "Start restart process",
             what: "restart",
           },
           {
             title: "Cleanup the server",
             details:
-              "Free up server disk space by deleting unused docker images and logs of Bitcart",
+              "Free up server disk space by deleting unused docker images and logs of RedWaves",
             btnText: "Start cleanup process",
             what: "cleanup",
           },
@@ -56,7 +56,7 @@ export default {
           },
           {
             title: "Cleanup logs",
-            details: "Free up server disk space by deleting logs of Bitcart",
+            details: "Free up server disk space by deleting logs of RedWaves",
             btnText: "Start cleanup process",
             what: "cleanup/logs",
           },

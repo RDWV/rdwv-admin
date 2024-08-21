@@ -135,7 +135,7 @@
     <template #footer>
       <UIExtensionSlot name="footer">
         <v-footer fixed app @mouseenter.native="drawerOff">
-          <span>&copy; Bitcart v{{ VERSION }}</span>
+          <span>&copy; RedWaves v{{ VERSION }}</span>
           <v-spacer />
           <nuxt-link
             v-if="

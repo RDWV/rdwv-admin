@@ -243,7 +243,7 @@ export default {
         {
           text: "Notification url",
           value: "notification_url",
-          help: "https://docs.bitcart.ai/bitcart-basics/walkthrough#notification-url",
+          help: "https://docs.rdwv.ai/rdwv-basics/walkthrough#notification-url",
           rules: ["url"],
           expand: true,
         },
@@ -350,7 +350,7 @@ export default {
   },
   head() {
     return {
-      script: [{ src: `${this.STATIC_PATH}/modal/bitcart.js` }],
+      script: [{ src: `${this.STATIC_PATH}/modal/rdwv.js` }],
     }
   },
   methods: {

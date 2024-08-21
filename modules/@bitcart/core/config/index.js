@@ -1,5 +1,5 @@
 export default {
-  name: "@bitcart/core",
+  name: "@rdwv/core",
   aliases: {
     "@Core": "/",
   },

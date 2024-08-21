@@ -1,5 +1,5 @@
 /* eslint-disable */
-window.BitcartShopifyIntegrationModule = function () {
+window.RdwvShopifyIntegrationModule = function () {
   const pageElements = document.querySelector.bind(document)
   const insertElement =
     (document.querySelectorAll.bind(document),
@@ -7,16 +7,16 @@ window.BitcartShopifyIntegrationModule = function () {
       n.parentNode.insertBefore(e, n.nextSibling)
     })
 
-  // execute BitcartShopifyIntegrationModule as soon as possible
+  // execute RedWavesShopifyIntegrationModule as soon as possible
   const paymentMethod = pageElements(".payment-method-list__item__info")
   if (paymentMethod === null) {
     return void setTimeout(() => {
-      window.BitcartShopifyIntegrationModule()
+      window.RdwvShopifyIntegrationModule()
     }, 10)
   }
 
-  if (!window.bitcart) {
-    throw new Error("The Bitcart modal js was not loaded on this page.")
+  if (!window.rdwv) {
+    throw new Error("The Rdwv modal js was not loaded on this page.")
   }
   if (!window.Shopify) {
     throw new Error("The Shopify global object was not loaded on this page.")
@@ -95,7 +95,7 @@ window.BitcartShopifyIntegrationModule = function () {
       })
       .catch(function () {
         if (!backgroundCheck)
-          alert("Could not initiate Bitcart payment method, try again later.")
+          alert("Could not initiate Rdwv payment method, try again later.")
       })
   }
 
@@ -109,7 +109,7 @@ window.BitcartShopifyIntegrationModule = function () {
     currentInvoiceData = data
     if (!currentInvoiceData) {
       if (modalShown) {
-        window.bitcart.hideFrame()
+        window.rdwv.hideFrame()
         fail()
       } else if (opts && opts.backgroundCheck) {
         injectPaymentButtonHtml()
@@ -136,25 +136,25 @@ window.BitcartShopifyIntegrationModule = function () {
   function showModal() {
     if (currentInvoiceData && !modalShown) {
       modalShown = true
-      window.bitcart.setAdminUrlPrefix(adminURL)
-      window.bitcart.onModalReceiveMessage(function (evt) {
+      window.rdwv.setAdminUrlPrefix(adminURL)
+      window.rdwv.onModalReceiveMessage(function (evt) {
         if (evt && evt.invoiceId && evt.status) {
           currentInvoiceData = evt
         }
       })
 
-      window.bitcart.onModalWillEnter(function () {
+      window.rdwv.onModalWillEnter(function () {
         modalShown = true
       })
 
-      window.bitcart.onModalWillLeave(function () {
+      window.rdwv.onModalWillLeave(function () {
         modalShown = false
         getOrCheckInvoice(true).then(function (d) {
           buttonElement.innerHTML = payButtonHtml
           handleInvoiceData(d, { backgroundCheck: true })
         })
       })
-      window.bitcart.showInvoice(currentInvoiceData.invoice_id)
+      window.rdwv.showInvoice(currentInvoiceData.invoice_id)
     }
   }
 
@@ -164,22 +164,22 @@ window.BitcartShopifyIntegrationModule = function () {
   }
 
   const payButtonHtml =
-    '<button class="" onclick="onPayButtonClicked()" style="width:210px; border: none; outline: none;">Pay with Bitcart</button>'
+    '<button class="" onclick="onPayButtonClicked()" style="width:210px; border: none; outline: none;">Pay with Rdwv</button>'
 
   function injectPaymentButtonHtml() {
     // Payment button that opens modal
-    buttonElement = document.getElementById("bitcart-pay")
+    buttonElement = document.getElementById("rdwv-pay")
     if (buttonElement) {
       return
     }
     buttonElement = document.createElement("div")
-    buttonElement.id = "bitcart-pay"
+    buttonElement.id = "rdwv-pay"
     buttonElement.innerHTML = payButtonHtml
     insertElement(buttonElement, pageItems.orderConfirmed)
   }
 
   if (
-    ["bitcoin", "btc", "bitcartcc", "bitcart"].filter((value) =>
+    ["bitcoin", "btc", "rdwvcc", "rdwv"].filter((value) =>
       pageItems.paymentMethod.innerText.toLowerCase().includes(value)
     ).length === 0
   ) {
@@ -193,4 +193,4 @@ window.BitcartShopifyIntegrationModule = function () {
   })
 }
 
-window.BitcartShopifyIntegrationModule()
+window.RdwvShopifyIntegrationModule()
